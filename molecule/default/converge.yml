@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    filebeat_setup_kibana: false
+  tasks:
+    - name: "Include kibana-role"
+      include_role:
+        name: "filebeat-role"

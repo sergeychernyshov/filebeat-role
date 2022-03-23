@@ -1,7 +1,7 @@
 ---
-- name: restart filebeat
+- name: restart Filebeat
   become: true
-  systemd:
+  service:
     name: filebeat
-    state: restarted 
-    enabled: true
+    state: restarted
+  tags: filebeat
